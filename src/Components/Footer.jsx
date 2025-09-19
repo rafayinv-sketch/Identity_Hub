@@ -66,19 +66,19 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center gap-18">
-            <a href="#">
+            <a href="https://x.com/">
               <i class="bi bi-twitter-x"></i>
             </a>
-            <a href="#">
+            <a href="https://instagram.com/">
               <i class="bi bi-instagram"></i>
             </a>
-            <a href="#">
+            <a href="https://telegram.com/">
               <i class="bi bi-telegram"></i>
             </a>
-            <a href="#">
+            <a href="https://facebook.com/">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="#">
+            <a href="https://whatsapp.com/">
               <i class="bi bi-whatsapp"></i>
             </a>
           </div>

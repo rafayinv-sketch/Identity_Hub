@@ -1,104 +1,79 @@
-import React from "react";
-import Button from "./Button";
-import Bg_grdient from "../assets/Pictures/Bg_grdient.png";
-import Productivity from "../assets/Pictures/Productivity.png";
+import React, { useState } from "react";
 
 const Section4 = () => {
+  // Track current slide
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // All slides (text instead of images)
+  const slides = [
+    {
+      title: "Boost Your Productivity",
+      desc: "Organize your tasks and achieve more every day.",
+    },
+    {
+      title: "Collaborate Seamlessly",
+      desc: "Work together in real time with your team.",
+    },
+    {
+      title: "Track Your Progress",
+      desc: "Stay on top of deadlines and milestones.",
+    },
+    {
+      title: "Achieve Your Goals",
+      desc: "Turn your ideas into reality with consistency.",
+    },
+  ];
+
+  // Go to previous
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  // Go to next
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  // Go to specific slide
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="bg-black p-4 flex flex-col items-center overflow-hidden relative mt-0">
-      <div
-        id="default-carousel"
-        className="relative w-full"
-        data-carousel="slide"
-      >
-        {/* Carousel wrapper */}
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src={Productivity}
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-2.svg"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-3.svg"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-4.svg"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-5.svg"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
+      <div className="relative w-full h-56 md:h-96 overflow-hidden rounded-lg flex items-center justify-center">
+        {/* Slide Content */}
+        <div className="absolute w-full h-full flex flex-col items-center justify-center text-center px-6 transition duration-700 ease-in-out">
+          <h2 className="text-2xl md:text-4xl font-bold  text-[#CAD1E9] mb-3">
+            {slides[currentIndex].title}
+          </h2>
+          <p className=" text-[#CAD1E9] text-sm md:text-lg max-w-md">
+            {slides[currentIndex].desc}
+          </p>
         </div>
 
-        {/* Carousel indicators */}
-        <div className=" absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse p-5">
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full bg-[#CAD1E9]"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full bg-[#CAD1E9]"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full bg-[#CAD1E9]"
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"
-          ></button>
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full bg-[#CAD1E9]"
-            aria-current="false"
-            aria-label="Slide 4"
-            data-carousel-slide-to="3"
-          ></button>
+        {/* Indicators */}
+        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 p-5">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex ? "bg-white" : "bg-[#CAD1E9]"
+              }`}
+            ></button>
+          ))}
         </div>
 
-        {/* Previous button */}
+        {/* Prev Button */}
         <button
-          type="button"
-          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none p-5"
-          data-carousel-prev
+          onClick={prevSlide}
+          className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         >
-          <span
-            className="bg-[linear-gradient(120deg,#090EDB_13.43%,#E73DC4_73.37%)] inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 
-            group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white 
-            dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
+          <span className="bg-[linear-gradient(120deg,#090EDB_13.43%,#E73DC4_73.37%)] inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
             <svg
-              className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              className="w-4 h-4 text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -116,19 +91,14 @@ const Section4 = () => {
           </span>
         </button>
 
-        {/* Next button */}
+        {/* Next Button */}
         <button
-          type="button"
-          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none p-5"
-          data-carousel-next
+          onClick={nextSlide}
+          className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         >
-          <span
-            className="bg-[linear-gradient(120deg,#090EDB_13.43%,#E73DC4_73.37%)] inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 
-            group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white 
-            dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
+          <span className="bg-[linear-gradient(120deg,#090EDB_13.43%,#E73DC4_73.37%)] inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
             <svg
-              className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              className="w-4 h-4 text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
