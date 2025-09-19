@@ -48,7 +48,7 @@ const Section2 = () => {
 
       <div className="relative w-full flex flex-col items-center">
         {/* Card 1 */}
-        <div className="w-[1175px] px-4 text-white rounded mt-10">
+        <div className="w-[1175px] px-4 text-white rounded mt-10 ">
           <GlassCard className="relative overflow-hidden w-full p-5">
             <div>
               {" "}

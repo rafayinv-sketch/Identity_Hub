@@ -17,6 +17,11 @@ const Section1 = () => {
     <div className="relative bg-black p-4 flex flex-col items-center overflow-hidden">
       {/* ---------------- Background ---------------- */}
       <img
+        src={Header_bg}
+        alt="background"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[950px] z-0 opacity-80"
+      />
+      <img
         src={Bg_grdient}
         alt="background"
         className="absolute top-30 left-1/2 -translate-x-1/2 w-[755px] z-0 opacity-50 blur-2xl"
