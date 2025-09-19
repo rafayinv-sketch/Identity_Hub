@@ -10,7 +10,7 @@ const NavBar = () => {
           <div>
             <img className="w-[148px] h-[25px]" src={Logo} alt="..." />
           </div>
-          <div className="flex items-center gap-8">
+          <div className="lg:flex hidden items-center gap-8">
             <div>
               <a href="#">Services</a>
             </div>
