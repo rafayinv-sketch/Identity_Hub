@@ -8,7 +8,11 @@ const Button = ({ text, icon, size = "md" }) => {
   };
 
   return (
-    <button className="relative rounded-xl p-[1px] bg-gradient-to-r from-[#090EDB] to-[#8D1EA2]">
+    <button
+      className="relative rounded-xl p-[1px] 
+    bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] 
+    transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+    >
       <span
         className={`relative flex items-center rounded-xl bg-black overflow-hidden ${
           sizes[size]

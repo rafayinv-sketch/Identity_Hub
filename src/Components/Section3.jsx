@@ -5,6 +5,7 @@ import GlassCard from "./GlassCard";
 import Checkmark2 from "../assets/Pictures/Checkmark2.png";
 import ButtonBg from "./ButtonBg";
 import Sec3_bg from "../assets/Pictures/Sec3_bg.png";
+import Noise from "../assets/Pictures/Noise.png";
 
 const Section3 = () => {
   return (
@@ -20,6 +21,12 @@ const Section3 = () => {
         src={Sec3_bg}
         alt="..."
       />
+      <img
+        src={Noise}
+        alt="..."
+        className="absolute w-[755px] top-60 left-1/2 -translate-x-1/2 z-0"
+      />
+
       <div className="flex flex-col items-center overflow-hidden relative mt-25">
         {/* Top Button */}
         <Button text="Pricing" size="sm" />

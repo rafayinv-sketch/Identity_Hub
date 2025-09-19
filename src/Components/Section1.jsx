@@ -11,6 +11,7 @@ import Credit from "../assets/Pictures/Credit.png";
 import Email from "../assets/Pictures/Email.png";
 import Line from "../assets/Pictures/Line.png";
 import Card_gradient from "../assets/Pictures/Card_gradient.png";
+import Noise from "../assets/Pictures/Noise.png";
 
 const Section1 = () => {
   return (
@@ -18,13 +19,18 @@ const Section1 = () => {
       {/* ---------------- Background ---------------- */}
       <img
         src={Header_bg}
-        alt="background"
+        alt="..."
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[950px] z-0 opacity-80"
       />
       <img
         src={Bg_grdient}
-        alt="background"
+        alt="..."
         className="absolute top-30 left-1/2 -translate-x-1/2 w-[755px] z-0 opacity-50 blur-2xl"
+      />
+      <img
+        src={Noise}
+        alt="..."
+        className="absolute w-[755px] top-60 left-1/2 -translate-x-1/2 z-0"
       />
 
       {/* ---------------- Content ---------------- */}
@@ -114,11 +120,7 @@ const Section1 = () => {
         </div>
 
         {/* Center Image */}
-        <img
-          className="animate-spin-x mt-2 w-[370px]"
-          src={Productivity}
-          alt="..."
-        />
+        <img className="mt-2 w-[370px]" src={Productivity} alt="..." />
       </div>
 
       <div className="mt-40 p-4 flex flex-col items-center overflow-hidden">

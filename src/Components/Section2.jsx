@@ -17,6 +17,7 @@ import Password from "../assets/Pictures/Password.png";
 import Otp from "../assets/Pictures/Otp.png";
 import Lock from "../assets/Pictures/Lock.png";
 import Bg_grdient from "../assets/Pictures/Bg_grdient.png";
+import Noise from "../assets/Pictures/Noise.png";
 
 const Section2 = () => {
   return (
@@ -27,6 +28,12 @@ const Section2 = () => {
         alt="background"
         className="absolute top-[155px] left-1/2 -translate-x-1/3 w-[755px] z-0 opacity-50 blur-2xl"
       />
+      <img
+        src={Noise}
+        alt="..."
+        className="absolute w-[755px] top-60 left-1/2 -translate-x-1/2 z-0"
+      />
+
       {/* button */}
       <Button text={"Features"} size="sm" />
       {/* heading */}

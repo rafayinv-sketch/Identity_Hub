@@ -4,6 +4,7 @@ import Footer_bg from "../assets/Pictures/Footer_bg.png";
 import Line from "../assets/Pictures/Line.png";
 import ButtonBg from "./ButtonBg";
 import Logo from "../assets/Pictures/Logo.png";
+import Noise from "../assets/Pictures/Noise.png";
 
 const Footer = () => {
   return (
@@ -14,6 +15,11 @@ const Footer = () => {
         src={Footer_grdient}
         alt="..."
         className="w-[800px] z-0 absolute opacity-70"
+      />
+      <img
+        src={Noise}
+        alt="..."
+        className="absolute w-[755px] left-1/2 -translate-x-1/2 z-0"
       />
 
       {/* Heading & CTA */}
@@ -56,10 +62,10 @@ const Footer = () => {
         <div className="w-full text-[#CAD1E9] mt-3 p-2 rounded-xl flex items-center justify-between px-6">
           <div>
             <p className="text-[15px]">
-              © identityhub 2024. All rights reserved
+              © identityhub 2025. All rights reserved
             </p>
           </div>
-          <div className="flex items-center gap-16">
+          <div className="flex items-center gap-18">
             <a href="#">
               <i class="bi bi-twitter-x"></i>
             </a>
@@ -81,5 +87,5 @@ const Footer = () => {
     </div>
   );
 };
-// © identityhub 2024. All rights reserved
+
 export default Footer;
