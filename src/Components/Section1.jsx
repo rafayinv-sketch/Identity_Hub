@@ -114,7 +114,11 @@ const Section1 = () => {
         </div>
 
         {/* Center Image */}
-        <img className="mt-2 w-[370px]" src={Productivity} alt="..." />
+        <img
+          className="animate-spin-x mt-2 w-[370px]"
+          src={Productivity}
+          alt="..."
+        />
       </div>
 
       <div className="mt-40 p-4 flex flex-col items-center overflow-hidden">
