@@ -1,80 +1,126 @@
 import React from "react";
+import Bg_grdient from "../assets/Pictures/Bg_grdient.png";
 import Button from "./Button";
 import GlassCard from "./GlassCard";
-import Card_gradient from "../assets/Pictures/Card_gradient.png";
-import Slider from "../assets/Pictures/Slider.png";
+import Checkmark2 from "../assets/Pictures/Checkmark2.png";
+import ButtonBg from "./ButtonBg";
+
 const Section3 = () => {
   return (
-    <div className="bg-black p-4 flex flex-col items-center overflow-hidden">
-      {/* button */}
-      <Button text={"Features"} size="sm" />
-      {/* heading */}
-      <p
-        className="text-center text-[#CAD1E9] text-[30px] font-[500] mt-5"
-        style={{ fontFamily: "Sora, sans-serif" }}
-      >
-        Why{" "}
-        <span
-          className="text-center bg-clip-text text-transparent 
-          bg-[linear-gradient(90deg,#090EDB_13.43%,#E73DC4_73.37%)] 
-          text-[30px] font-[500]"
-          style={{ fontFamily: "Sora, sans-serif" }}
-        >
-          choose
-        </span>{" "}
-        us
-      </p>
-      {/* paragraph */}
-      <p
-        className="text-center text-[#CAD1E9] mt-5 w-110"
-        style={{ fontFamily: "Sora, sans-serif" }}
-      >
-        We are the only service that provides all 3 services as a packaged
-        service
-      </p>
-      <div>
-        {/* Card */}
-        <div className="w-[1175px] px-4 text-white rounded mt-10">
-          <GlassCard className="relative overflow-hidden w-full p-5">
-            {/* background gradient image */}
-            <img
-              src={Card_gradient}
-              alt="background"
-              className="absolute inset-0 w-full h-full object-cover opacity-60"
-            />
-            <div>
+    <div className="bg-black p-4 flex flex-col items-center overflow-hidden relative">
+      {/* ---------------- Background ---------------- */}
+      <img
+        src={Bg_grdient}
+        alt="background"
+        className="absolute top-[150px] left-1/2 -translate-x-1/3 w-[670px] z-0 opacity-50 blur-2xl"
+      />
+      <div className="flex flex-col items-center overflow-hidden relative mt-25">
+        {/* Top Button */}
+        <Button text="Pricing" size="sm" />
+        {/* heading */}
+        <p className="text-center text-[#CAD1E9] text-[30px] font-[500] mt-2">
+          Our{" "}
+          <span className="bg-clip-text text-transparent bg-[linear-gradient(120deg,#090EDB_13.43%,#E73DC4_73.37%)]">
+            Pricing
+          </span>{" "}
+          Package
+        </p>
+
+        {/* pricing cards */}
+
+        <div className="flex justify-center items-center gap-4 p-4 mt-3">
+          {/* card 1 */}
+          <GlassCard className="p-3">
+            <p className="text-[25px] font-[600]">Basic</p>
+            <div className="w-[200px] mt-2">
+              <p>AI chatbot, personalized recommendations</p>
+            </div>
+            <p className="mt-2 text-[25px] font-[600]">
+              $ <span className="text-[35px] font-[700]">0</span>{" "}
+            </p>
+            <div className="flex justify-center">
+              <Button text="Get Started" />
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Type of threat</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Online presence</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Access to all modules</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Notability</p>
+            </div>
+          </GlassCard>
+
+          {/* card2 */}
+          <GlassCard className="p-3">
+            <p className="text-[25px] font-[600]">Premium</p>
+            <div className="w-[300px] mt-2">
+              <p>Advanced AI chatbot, priority support, analytics dashboard</p>
+            </div>
+            <p className="mt-2 text-[25px] font-[600]">
+              $ <span className="text-[35px] font-[700]">9.99</span>{" "}
+            </p>
+            <div className="flex justify-center mt-2">
+              <ButtonBg text="Get Started" />
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Type of threat</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Online presence</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Access to all modules</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Notability</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Optimize existing websites</p>
+            </div>
+          </GlassCard>
+
+          {/* card3 */}
+          <GlassCard className="p-3">
+            <p className="text-[25px] font-[600]">Enterprise</p>
+            <div className="w-[200px] mt-2">
+              <p>AI chatbot, personalized recommendations</p>
+            </div>
+            <p className="mt-2 text-[25px] font-[600]">
+              $ <span className="text-[35px] font-[700]">20.99</span>{" "}
+            </p>
+            <div className="flex justify-center mt-2">
               {" "}
-              <div className="flex flex-row items-center">
-                {/* content above bg */}
-                <img className="h-[270px]" src={Slider} alt="..." />
-                <div className="ml-[30px]">
-                  <p className="text-[25px] font-[600]">
-                    Protect Personal information
-                  </p>
-                  <div className="w-[430px] text-[14px] font-[400]">
-                    <p className="ml-5 mt-5">
-                      <i class="bi bi-check2-circle"></i> The first step
-                      involves identifying all places where your personal
-                      information might be present.
-                    </p>
-                    <p className="ml-5 mt-5">
-                      <i class="bi bi-check2-circle"></i> Once you've identified
-                      where your information is held, the next step is to
-                      contact the administrators of this platform
-                    </p>
-                    <p className="ml-5 mt-5">
-                      <i class="bi bi-check2-circle"></i> Removing personal
-                      information is not a one-time task but requires ongoing
-                      vigilance.
-                    </p>
-                    <p className="ml-5 mt-5">
-                      <i class="bi bi-check2-circle"></i> There are professional
-                      services and tools available that specialise in personal
-                      information removal.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Button text="Get Started" />
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Type of threat</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Online presence</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Access to all modules</p>
+            </div>
+            <div className="ml-3 mt-5 flex flex-row justify-start">
+              <img className=" w-4 h-4" src={Checkmark2} alt="..." />
+              <p className="ml-3">Notability</p>
             </div>
           </GlassCard>
         </div>
