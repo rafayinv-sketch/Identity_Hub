@@ -241,31 +241,63 @@ const Section2 = () => {
               </div>
             </div>
 
-            {/* Floating Cards */}
-            <div className="absolute bottom-11 right-5 md:right-[170px] z-20">
-              <GlassCard className="p-2">
-                <div className="inline-flex gap-3 items-center">
-                  <GlassCard className="p-1">
-                    <img className="w-[27px]" src={Email2} alt="Email" />
-                  </GlassCard>
-                  <p className="mb-0">
-                    Email address <br /> +1 (456) 453-3456
-                  </p>
-                </div>
-              </GlassCard>
+            {/* desktop view */}
+            <div className="hidden lg:block">
+              {" "}
+              {/* Floating Cards */}
+              <div className="absolute bottom-11 right-5 md:right-[170px] z-20">
+                <GlassCard className="p-2">
+                  <div className="inline-flex gap-3 items-center">
+                    <GlassCard className="p-1">
+                      <img className="w-[27px]" src={Email2} alt="Email" />
+                    </GlassCard>
+                    <p className="mb-0">
+                      Email address <br /> +1 (456) 453-3456
+                    </p>
+                  </div>
+                </GlassCard>
+              </div>
+              <div className="absolute bottom-48 right-5 md:right-[250px] z-20">
+                <GlassCard className="p-2">
+                  <div className="inline-flex gap-3 items-center">
+                    <GlassCard className="p-1">
+                      <img className="w-[27px]" src={User2} alt="User" />
+                    </GlassCard>
+                    <p className="mb-0">
+                      Username <br /> +1 (456) 453-3456
+                    </p>
+                  </div>
+                </GlassCard>
+              </div>
             </div>
 
-            <div className="absolute bottom-48 right-5 md:right-[250px] z-20">
-              <GlassCard className="p-2">
-                <div className="inline-flex gap-3 items-center">
-                  <GlassCard className="p-1">
-                    <img className="w-[27px]" src={User2} alt="User" />
-                  </GlassCard>
-                  <p className="mb-0">
-                    Username <br /> +1 (456) 453-3456
-                  </p>
-                </div>
-              </GlassCard>
+            {/* responsive view */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
+              {/* Floating Cards */}
+              <div className="absolute bottom-11 right-5 md:right-[170px] z-20">
+                <GlassCard className="p-2">
+                  <div className="inline-flex gap-3 items-center">
+                    <GlassCard className="p-1">
+                      <img className="w-[27px]" src={Email2} alt="Email" />
+                    </GlassCard>
+                    <p className="mb-0">
+                      Email address <br /> +1 (456) 453-3456
+                    </p>
+                  </div>
+                </GlassCard>
+              </div>
+              <div className="absolute bottom-48 right-5 md:right-[250px] z-20">
+                <GlassCard className="p-2">
+                  <div className="inline-flex gap-3 items-center">
+                    <GlassCard className="p-1">
+                      <img className="w-[27px]" src={User2} alt="User" />
+                    </GlassCard>
+                    <p className="mb-0">
+                      Username <br /> +1 (456) 453-3456
+                    </p>
+                  </div>
+                </GlassCard>
+              </div>
             </div>
           </GlassCard>
         </div>
