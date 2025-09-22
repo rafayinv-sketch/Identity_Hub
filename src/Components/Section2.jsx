@@ -46,7 +46,7 @@ const Section2 = () => {
       </p>
       {/* paragraph */}
       <p
-        className="text-center text-[#CAD1E9] mt-5 w-110"
+        className="text-center text-[#CAD1E9] mt-5 max-w-[440px] mx-auto"
         style={{ fontFamily: "Sora, sans-serif" }}
       >
         We are the only service that provides all 3 services as a packaged

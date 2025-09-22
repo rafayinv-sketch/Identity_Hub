@@ -14,17 +14,19 @@ const Section3 = () => {
       <img
         src={Bg_grdient}
         alt="background"
-        className="absolute top-[130px] left-1/2 -translate-x-1/2 w-[680px] z-0 opacity-50 blur-2xl"
+        className="absolute top-[130px] left-1/2 -translate-x-1/2 w-full max-w-[680px]  z-0 opacity-50 blur-2xl"
       />
+
       <img
         className="absolute top-28 left-248 w-[250px]"
         src={Sec3_bg}
         alt="..."
       />
+
       <img
         src={Noise}
         alt="..."
-        className="absolute w-[755px] top-60 left-1/2 -translate-x-1/2 z-0"
+        className="absolute w-full max-w-[755px] top-60 left-1/2 -translate-x-1/2 z-0"
       />
 
       <div className="flex flex-col items-center overflow-hidden relative mt-25">
@@ -41,7 +43,7 @@ const Section3 = () => {
 
         {/* pricing cards */}
 
-        <div className="flex justify-center items-center gap-4 p-4 mt-3">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-4 p-4 mt-3">
           {/* card 1 */}
           <GlassCard className="p-5">
             <p className="text-[25px] font-[600]">Basic</p>

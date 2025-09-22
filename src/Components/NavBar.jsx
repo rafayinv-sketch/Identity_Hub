@@ -4,39 +4,31 @@ import Button from "./Button";
 
 const NavBar = () => {
   return (
-    <div>
-      <div className="bg-black p-4 flex items-center justify-center">
-        <div className="border border-white/10 w-[1175px] h-[50px] text-[#CAD1E9] p-2 rounded-xl flex items-center justify-between">
-          <div>
-            <img className="w-[148px] h-[25px]" src={Logo} alt="..." />
-          </div>
-          <div className="lg:flex hidden items-center gap-8">
-            <div>
-              <a href="#">Services</a>
-            </div>
-            <div>
-              <a href="#">Features</a>
-            </div>
-            <div>
-              <a href="#">Pricing</a>
-            </div>
-            <div>
-              <a href="#">Partners</a>
-            </div>
-            <div>
-              <a href="#">About us</a>
-            </div>
-          </div>
+    <nav className="bg-black p-4 flex justify-center">
+      <div className="border border-white/10 w-full max-w-[1175px] text-[#CAD1E9] px-4 py-3 rounded-xl flex flex-col lg:flex-row items-center justify-between gap-6">
+        {/* Logo */}
+        <div>
+          <img className="w-[148px] h-[25px]" src={Logo} alt="logo" />
+        </div>
 
-          <div>
-            <Button
-              text={"Start free trial"}
-              icon={<i class="bi bi-caret-right-fill"></i>}
-            />
-          </div>
+        {/* Links */}
+        <div className="flex flex-col lg:flex-row items-center gap-6 text-sm font-medium">
+          <a href="#">Services</a>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Partners</a>
+          <a href="#">About us</a>
+        </div>
+
+        {/* Button */}
+        <div>
+          <Button
+            text="Start free trial"
+            icon={<i className="bi bi-caret-right-fill"></i>}
+          />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
