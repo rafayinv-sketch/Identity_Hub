@@ -140,6 +140,8 @@ const Section3 = () => {
           </GlassCard>
         </div>
       </div>
+
+      {/* testimonials */}
       <div className="flex flex-col items-center overflow-hidden relative mt-25">
         {/* Top Button */}
         <Button className="mt-10" text="Testimonials" size="sm" />

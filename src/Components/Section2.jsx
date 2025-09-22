@@ -30,12 +30,13 @@ const Section2 = () => {
       />
       <img
         src={Noise}
-        alt="..."
+        alt="noise"
         className="absolute w-[755px] top-60 left-1/2 -translate-x-1/2 z-0"
       />
 
       {/* button */}
       <Button text={"Features"} size="sm" />
+
       {/* heading */}
       <p className="text-center text-[#CAD1E9] text-[30px] font-[500] mt-5">
         Why{" "}
@@ -44,6 +45,7 @@ const Section2 = () => {
         </span>{" "}
         us
       </p>
+
       {/* paragraph */}
       <p
         className="text-center text-[#CAD1E9] mt-5 max-w-[440px] mx-auto"
@@ -53,260 +55,196 @@ const Section2 = () => {
         service
       </p>
 
+      {/* ================== Cards Container ================== */}
       <div className="relative w-full flex flex-col items-center">
         {/* Card 1 */}
-        <div className="w-[1175px] px-4 text-white rounded mt-10 ">
-          <GlassCard className="relative overflow-hidden w-full p-5">
-            <div>
-              {" "}
-              <div className="flex flex-row items-center p-5">
-                {/* content above bg */}
-                <img className="h-[270px]" src={Slider1} alt="..." />
-                <div className="ml-[30px]">
-                  <p className="text-[25px] font-[600]">
-                    Protect Personal information
+        <div className="mx-auto w-full max-w-[1175px] text-white rounded mt-10 px-4">
+          <GlassCard className="relative overflow-hidden w-full h-auto md:h-[450px] p-5">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8 h-full">
+              {/* Left */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <img
+                  className="h-[200px] md:h-[270px] object-contain"
+                  src={Slider1}
+                  alt="slider"
+                />
+
+                <div>
+                  <p className="text-[22px] md:text-[25px] font-[600] text-center sm:text-left">
+                    Protect Personal Information
                   </p>
-                  <div className="w-[430px] text-[14px] font-[400]">
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark1} alt="..." />
-                      <p className="ml-3">
-                        The first step involves identifying all places where
-                        your personal information might be present.
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark1} alt="..." />
-                      <p className="ml-3">
-                        Once you've identified where your information is held,
-                        the next step is to contact the administrators of this
-                        platform
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark1} alt="..." />
-                      <p className="ml-3">
-                        Removing personal information is not a one-time task but
-                        requires ongoing vigilance.
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark1} alt="..." />
-                      <p className="ml-3">
-                        There are professional services and tools available that
-                        specialise in personal information removal.
-                      </p>
-                    </div>
+                  <div className="w-full max-w-[430px] text-[14px] font-[400]">
+                    {[
+                      "The first step involves identifying all places where your personal information might be present.",
+                      "Once you've identified where your information is held, the next step is to contact the administrators of this platform.",
+                      "Removing personal information is not a one-time task but requires ongoing vigilance.",
+                      "There are professional services and tools available that specialise in personal information removal.",
+                    ].map((text, idx) => (
+                      <div
+                        key={idx}
+                        className="ml-3 mt-5 flex flex-row justify-start"
+                      >
+                        <img className="w-4 h-4" src={Checkmark1} alt="check" />
+                        <p className="ml-3">{text}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="flex justify-center items-center">
-                  <img className="w-90 ml-50" src={Sec2_card1} alt="..." />
-                </div>
+              </div>
+
+              {/* Right */}
+              <div className="p-5">
+                <img className="w-40 md:w-90" src={Sec2_card1} alt="sec1" />
               </div>
             </div>
           </GlassCard>
         </div>
-        {/* Card 1 */}
 
         {/* Card 2 */}
-        <div className="w-[1175px] px-4 text-white rounded mt-10">
-          <GlassCard className="relative overflow-hidden w-full p-5">
-            <div>
-              {" "}
-              <div className="flex flex-row items-center p-5 ">
-                {/* content above bg */}
-                <img className="h-[270px]" src={Slider2} alt="..." />
-                <div className="ml-[30px]">
-                  <p className="text-[25px] font-[600]">Detailed Reporting</p>
-                  <div className="w-[430px] text-[14px] font-[400]">
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark2} alt="..." />
-                      <p className="ml-3">
-                        The first step involves identifying all places where
-                        your personal information might be present.
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark2} alt="..." />
-                      <p className="ml-3">
-                        Once you've identified where your information is held,
-                        the next step is to contact the administrators of this
-                        platform
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark2} alt="..." />
-                      <p className="ml-3">
-                        Removing personal information is not a one-time task but
-                        requires ongoing vigilance.
-                      </p>
-                    </div>
-                    <div className="ml-3 mt-5 flex flex-row justify-start">
-                      <img className=" w-4 h-4" src={Checkmark2} alt="..." />
-                      <p className="ml-3">
-                        There are professional services and tools available that
-                        specialise in personal information removal.
-                      </p>
-                    </div>
+        <div className="mx-auto w-full max-w-[1175px] text-white rounded mt-10 px-4">
+          <GlassCard className="relative overflow-hidden w-full h-auto md:h-[450px] p-5">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8 h-full">
+              {/* Left */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <img
+                  className="h-[200px] md:h-[270px]"
+                  src={Slider2}
+                  alt="..."
+                />
+                <div>
+                  <p className="text-[22px] md:text-[25px] font-[600] text-center sm:text-left">
+                    Detailed Reporting
+                  </p>
+                  <div className="w-full max-w-[430px] text-[14px] font-[400]">
+                    {[
+                      "The first step involves identifying all places where your personal information might be present.",
+                      "Once you've identified where your information is held, the next step is to contact the administrators of this platform.",
+                      "Removing personal information is not a one-time task but requires ongoing vigilance.",
+                      "There are professional services and tools available that specialise in personal information removal.",
+                    ].map((text, idx) => (
+                      <div
+                        key={idx}
+                        className="ml-3 mt-5 flex flex-row justify-start"
+                      >
+                        <img className="w-4 h-4" src={Checkmark2} alt="check" />
+                        <p className="ml-3">{text}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="ml-[87px] w-180">
-                  <div className="flex flex-row justify-center gap-[77px]">
-                    {" "}
-                    {/* username Card */}
-                    <div className="">
-                      <GlassCard>
-                        <div className="inline-flex gap-3 justify-center items-center">
-                          <GlassCard>
-                            <img className="w-[27px]" src={User} alt="OTP" />
-                          </GlassCard>
-                          <p>
-                            Username <br /> +1 (456) 453-3456
-                          </p>
-                        </div>
-                      </GlassCard>
-                    </div>
-                    {/* username Card */}
-                    {/* phone number Card */}
-                    <div className="">
-                      <GlassCard>
-                        <div className="inline-flex gap-3 justify-center items-center">
-                          <GlassCard>
-                            <img className="w-[27px]" src={Call} alt="OTP" />
-                          </GlassCard>
-                          <p>
-                            Phone numbers <br /> +1 (456) 453-3456
-                          </p>
-                        </div>
-                      </GlassCard>
-                    </div>
-                    {/* phone number Card */}
-                  </div>
+              </div>
 
-                  <div className="flex flex-row justify-between mt-3">
-                    {/* Email address Card */}
-                    <div className="">
-                      <GlassCard>
-                        <div className="inline-flex gap-3 justify-center items-center">
-                          <GlassCard>
-                            <img className="w-[27px]" src={Email2} alt="OTP" />
-                          </GlassCard>
-                          <p>
-                            Email address <br /> +1 (456) 453-3456
-                          </p>
-                        </div>
-                      </GlassCard>
-                    </div>
-                    {/* Email address Card */}
-                    {/* Credit card Card */}
-                    <div className="">
-                      <GlassCard>
-                        <div className="inline-flex gap-3 justify-center items-center">
-                          <GlassCard>
-                            <img src={Credit} alt="OTP" />
-                          </GlassCard>
-                          <p>
-                            Credit card <br /> +1 (456) 453-3456
-                          </p>
-                        </div>
-                      </GlassCard>
-                    </div>
-                    {/* Credit card Card */}
-                  </div>
-
-                  <div className="flex flex-row justify-between mt-3">
-                    {/* Password Card */}
-                    <div className="">
-                      <GlassCard>
-                        <div className="inline-flex gap-3 justify-center items-center">
+              {/* Right */}
+              <div className="flex flex-col gap-3 w-full md:w-auto">
+                {[
+                  [
+                    {
+                      icon: User,
+                      label: "Username",
+                      value: "+1 (456) 453-3456",
+                    },
+                    {
+                      icon: Call,
+                      label: "Phone numbers",
+                      value: "+1 (456) 453-3456",
+                    },
+                  ],
+                  [
+                    {
+                      icon: Email2,
+                      label: "Email address",
+                      value: "+1 (456) 453-3456",
+                    },
+                    {
+                      icon: Credit,
+                      label: "Credit card",
+                      value: "+1 (456) 453-3456",
+                    },
+                  ],
+                  [
+                    {
+                      icon: Password,
+                      label: "Password",
+                      value: "+1 (456) 453-3456",
+                    },
+                    {
+                      icon: Otp,
+                      label: "OneTime passcode",
+                      value: "Kas3345-r32",
+                    },
+                  ],
+                ].map((row, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col sm:flex-row justify-center gap-5"
+                  >
+                    {row.map((item, j) => (
+                      <GlassCard key={j}>
+                        <div className="inline-flex gap-3 items-center p-2">
                           <GlassCard>
                             <img
                               className="w-[27px]"
-                              src={Password}
-                              alt="OTP"
+                              src={item.icon}
+                              alt={item.label}
                             />
                           </GlassCard>
                           <p>
-                            Password <br /> +1 (456) 453-3456
+                            {item.label} <br /> {item.value}
                           </p>
                         </div>
                       </GlassCard>
-                    </div>
-                    {/* Password Card */}
-                    {/* OTP Card */}
-                    <div className="">
-                      <GlassCard>
-                        <div className="inline-flex gap-3 justify-center items-center">
-                          <GlassCard>
-                            <img className="w-[27px]" src={Otp} alt="OTP" />
-                          </GlassCard>
-                          <p>
-                            OneTime passcode <br /> Kas3345-r32
-                          </p>
-                        </div>
-                      </GlassCard>
-                    </div>
-                    {/* OTP Card */}
+                    ))}
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </GlassCard>
         </div>
-        {/* Card 2 */}
 
         {/* Card 3 */}
-        <div className="w-[1175px] px-4 text-white rounded mt-10">
-          <GlassCard className="relative overflow-hidden w-full p-0">
-            <div className="flex flex-row items-center p-5 relative z-10">
-              {/* Main Image */}
-              <img className="h-[270px]" src={Slider3} alt="..." />
-
-              {/* Content */}
-              <div className="ml-[30px]">
-                <p className="text-[25px] font-[600] mb-2">Secure All Data</p>
-                <div className="w-[430px] text-[14px] font-[400]">
-                  <div className="ml-3 mt-5 flex flex-row justify-start">
-                    <img className=" w-4 h-4" src={Checkmark3} alt="..." />
-                    <p className="ml-3 mb-0">
-                      The first step involves identifying all places where your
-                      personal information might be present.
-                    </p>
-                  </div>
-                  <div className="ml-3 mt-5 flex flex-row justify-start">
-                    <img className=" w-4 h-4" src={Checkmark3} alt="..." />
-                    <p className="ml-3 mb-0">
-                      Once you've identified where your information is held, the
-                      next step is to contact the administrators of this
-                      platform
-                    </p>
-                  </div>
-                  <div className="ml-3 mt-5 flex flex-row justify-start">
-                    <img className=" w-4 h-4" src={Checkmark3} alt="..." />
-                    <p className="ml-3 mb-0">
-                      Removing personal information is not a one-time task but
-                      requires ongoing vigilance.
-                    </p>
-                  </div>
-                  <div className="ml-3 mt-5 flex flex-row justify-start">
-                    <img className=" w-4 h-4" src={Checkmark3} alt="..." />
-                    <p className="ml-3 mb-0">
-                      There are professional services and tools available that
-                      specialise in personal information removal.
-                    </p>
+        <div className="mx-auto w-full max-w-[1175px] text-white rounded mt-10 px-4">
+          <GlassCard className="relative overflow-hidden w-full h-auto md:h-[450px] p-5">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 h-full">
+              {/* Left */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <img
+                  className="h-[200px] md:h-[270px]"
+                  src={Slider3}
+                  alt="..."
+                />
+                <div>
+                  <p className="text-[22px] md:text-[25px] font-[600] mb-2 text-center sm:text-left">
+                    Secure All Data
+                  </p>
+                  <div className="w-full max-w-[430px] text-[14px] font-[400]">
+                    {[
+                      "The first step involves identifying all places where your personal information might be present.",
+                      "Once you've identified where your information is held, the next step is to contact the administrators of this platform.",
+                      "Removing personal information is not a one-time task but requires ongoing vigilance.",
+                      "There are professional services and tools available that specialise in personal information removal.",
+                    ].map((text, idx) => (
+                      <div
+                        key={idx}
+                        className="ml-3 mt-5 flex flex-row justify-start"
+                      >
+                        <img className="w-4 h-4" src={Checkmark3} alt="check" />
+                        <p className="ml-3 mb-0">{text}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              {/* Lock Image */}
-              <div className="flex justify-center items-center relative ml-83">
-                <img className="w-60" src={Lock} alt="..." />
+              {/* Right */}
+              <div className="flex justify-center items-center relative">
+                <img className="w-40 md:w-72" src={Lock} alt="Lock" />
               </div>
             </div>
 
-            {/* Email Card - absolutely positioned */}
-            <div className="absolute bottom-5 right-[170px] z-20">
+            {/* Floating Cards */}
+            <div className="absolute bottom-11 right-5 md:right-[170px] z-20">
               <GlassCard className="p-2">
-                <div className="inline-flex gap-3 justify-center items-center">
+                <div className="inline-flex gap-3 items-center">
                   <GlassCard className="p-1">
                     <img className="w-[27px]" src={Email2} alt="Email" />
                   </GlassCard>
@@ -317,10 +255,9 @@ const Section2 = () => {
               </GlassCard>
             </div>
 
-            {/* Username Card - absolutely positioned */}
-            <div className="absolute bottom-30 right-[250px] z-20">
+            <div className="absolute bottom-48 right-5 md:right-[250px] z-20">
               <GlassCard className="p-2">
-                <div className="inline-flex gap-3 justify-center items-center">
+                <div className="inline-flex gap-3 items-center">
                   <GlassCard className="p-1">
                     <img className="w-[27px]" src={User2} alt="User" />
                   </GlassCard>
@@ -332,7 +269,6 @@ const Section2 = () => {
             </div>
           </GlassCard>
         </div>
-        {/* Card 3 */}
       </div>
     </div>
   );
