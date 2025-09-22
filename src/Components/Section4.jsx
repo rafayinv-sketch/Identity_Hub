@@ -40,7 +40,7 @@ const Section4 = () => {
   };
 
   return (
-    <div className="bg-black p-4 flex flex-row lg:flex-col items-center overflow-hidden relative mt-0">
+    <div className="container mx-auto bg-black p-4 flex flex-row lg:flex-col items-center overflow-hidden relative mt-0">
       <div className="relative w-full h-56 md:h-96 overflow-hidden rounded-lg flex items-center justify-center">
         {/* Slide Content */}
         <div className="absolute w-full h-full flex flex-col items-center justify-center text-center px-6 transition duration-700 ease-in-out">

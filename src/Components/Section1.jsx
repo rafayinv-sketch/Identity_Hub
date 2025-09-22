@@ -34,8 +34,8 @@ const Section1 = () => {
           className="absolute w-[755px] top-60 left-1/2 -translate-x-1/2 z-0"
         />
 
+        {/* desktop view */}
         {/* ---------------- bg-card ---------------- */}
-        {/* Desktop floating cards */}
         <div className="hidden lg:block">
           {/* OTP Card */}
           <div className="absolute top-80 left-60">
@@ -131,7 +131,7 @@ const Section1 = () => {
           {/* Center Image */}
           <img className="mt-2 w-[370px]" src={Productivity} alt="..." />
 
-          {/* Mobile/Tablet responsive grid of cards */}
+          {/* responsive view */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
             {/* OTP */}
             <GlassCard>
@@ -183,7 +183,7 @@ const Section1 = () => {
           </div>
         </div>
 
-        {/* ---------------- Services Section ---------------- */}
+        {/* ---------------- Section 2 heading ---------------- */}
         <div className="mt-40 p-4 flex flex-col items-center overflow-hidden">
           {/* button */}
           <Button text={"Services"} size="sm" />
