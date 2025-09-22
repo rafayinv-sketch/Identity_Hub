@@ -62,7 +62,7 @@ const Section2 = () => {
           <GlassCard className="relative overflow-hidden w-full h-auto md:h-[450px] p-5">
             <div className="flex flex-col md:flex-row justify-between items-center gap-8 h-full">
               {/* Left */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div className="flex flex-row sm:flex-row items-center sm:items-start gap-6">
                 <img
                   className="h-[200px] md:h-[270px] object-contain"
                   src={Slider1}
@@ -105,7 +105,7 @@ const Section2 = () => {
           <GlassCard className="relative overflow-hidden w-full h-auto md:h-[450px] p-5">
             <div className="flex flex-col md:flex-row justify-between items-center gap-8 h-full">
               {/* Left */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div className="flex flex-row sm:flex-row items-center sm:items-start gap-6">
                 <img
                   className="h-[200px] md:h-[270px]"
                   src={Slider2}
@@ -206,7 +206,7 @@ const Section2 = () => {
           <GlassCard className="relative overflow-hidden w-full h-auto md:h-[450px] p-5">
             <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 h-full">
               {/* Left */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div className="flex flex-row sm:flex-row items-center sm:items-start gap-6">
                 <img
                   className="h-[200px] md:h-[270px]"
                   src={Slider3}
